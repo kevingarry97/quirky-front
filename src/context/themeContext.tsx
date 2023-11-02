@@ -6,7 +6,7 @@ const getFromLocalStorage = () => {
     if(typeof window !== 'undefined') {
         const theme = localStorage.getItem('theme')
     
-        return theme || 'light';
+        return theme || 'dark';
     }
 }
 
