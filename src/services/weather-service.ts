@@ -14,7 +14,11 @@ export const getWeather = (city: string, days?: number) => {
   );
 };
 
-export const fetchLocations = (params: string) =>{
+export const fetchLocations = (params: string) => {
     let locationsUrl = locationsEndpoint(params);
     return httpService.get(locationsUrl)
+}
+
+export const weatherCompare = (payload: any) => {
+  return httpService.post(apiUrl + '/compare-weather', payload);
 }
